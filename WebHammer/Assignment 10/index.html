@@ -1,0 +1,81 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        
+        
+        var ishigami = new Image();
+        ishigami.src = "ishigami_noface.jpg"
+        ishigami.onmouseover=function(){
+            ishigami.src="ishigami.jpg";
+        }
+        ishigami.onmouseout = function(){
+            ishigami.src = "ishigami_noface.jpg"
+        }
+        var happy = new Image();
+        happy.src = "happy.jpg"
+        happy.onmouseover=function(){
+            happy.src="sad.jpg";
+        }
+        happy.onmouseout = function(){
+            happy.src = "happy.jpg"
+        }
+        var land = new Image();
+        land.src = "landscape0.jpg"
+        land.onmouseover=function(){
+            land.src="landscape1.jpg";
+        }
+        land.onmouseout = function(){
+            land.src = "landscape0.jpg"
+        }
+        var scape = new Image();
+        scape.src = "landscape2.jpg"
+        scape.onmouseover=function(){
+            ishigami.src="ishigami.jpg";
+            happy.src="sad.jpg";
+            land.src="landscape1.jpg";
+        }
+        scape.onmouseout = function(){
+            ishigami.src = "ishigami_noface.jpg"
+            happy.src = "happy.jpg"
+            land.src = "landscape0.jpg"
+        }
+        
+    </script>
+    
+</head>
+<body >
+
+    <a href="#" onmouseover=" window.document.ishigami.src = 'ishigami.jpg'" ; 
+onmouseout=" window.document.ishigami.src = 'ishigami_noface.jpg'">
+    <img name = "ishigami" src="ishigami_noface.jpg">
+</a>
+    
+    <a href="#" onmouseover=" window.document.happy.src = 'sad.jpg'" ; 
+onmouseout=" window.document.happy.src = 'happy.jpg'">
+    <img name = "happy" src="happy.jpg">
+</a>
+
+<a href="#" onmouseover=" window.document.landscape.src = 'landscape2.jpg'" ; 
+onmouseout=" window.document.landscape.src = 'landscape1.jpg'">
+    <img name = "landscape" src="landscape1.jpg">
+</a>
+
+<a href="#" onmouseover=" window.document.happy.src = 'landscape0.jpg';
+   window.document.ishigami.src = 'landscape0.jpg';
+   window.document.landscape.src = 'landscape0.jpg';
+" ; 
+onmouseout=" window.document.happy.src = 'happy.jpg'
+window.document.ishigami.src = 'ishigami_noface.jpg'
+window.document.landscape.src = 'landscape1.jpg'
+"
+
+>
+    <img name = "land" src="landscape3.jpg">
+</a>
+   
+</body>
+</html>

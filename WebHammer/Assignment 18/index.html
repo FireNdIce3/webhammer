@@ -1,0 +1,39 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        let subWindow1;
+        let subWindow2;
+        let subWindow3;
+        let subWindow4;
+        let subWindow5;
+        function openW(){
+            subWindow1 = window.open("http://www.google.com","example","height=300,width=300,left=0,top=0,resizable=no,toolbar=no,scrollbars=no,status=no,location=no")
+            subWindow2 = window.open("http://www.wikipedia.com","example","height=300,width=300,left=400,top=0,resizable=no,toolbar=no,scrollbars=no,status=no,location=no")
+            subWindow3 = window.open("http://www.yahoo.com","example","height=300,width=300,left=0,top=400,resizable=no,toolbar=no,scrollbars=no,status=no,location=no")
+            subWindow4 = window.open("http://www.youtube.com","example","height=300,width=300,left=400,top=-900,resizable=no,toolbar=no,scrollbars=no,status=no,location=no")
+            subWindow5 = window.open("http://www.facebook.com","example","height=300,width=300,left=100*Math.Random(),top=100*Math.random(),resizable=no,toolbar=no,scrollbars=no,status=no,location=no")
+        }
+        function closeW(){
+            subWindow1.close();
+            subWindow2.close();
+            subWindow3.close();
+            subWindow4.close();
+            subWindow5.close();
+        }
+
+        
+    </script>
+</head>
+<body>
+    <img name = "google" src="google.jpg" onclick="openW()">
+    <script>
+        if(window.closed){
+            closeW();
+        }
+    </script>
+</body>
+</html>

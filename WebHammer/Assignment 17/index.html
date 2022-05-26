@@ -1,0 +1,23 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        let subWindow;
+        function openW(){
+            subWindow = window.open("http://www.google.com","example","height=300,width=300,left=100,top=100,resizable=no,toolbar=no,scrollbars=no,status=no,location=no")
+        }
+        function closeW(){
+            subWindow.close();
+        }
+
+        
+    </script>
+</head>
+<body>
+    <img name = "google" src="google.jpg" onclick="openW()">
+    <input type="button" value="close" onclick="closeW()">
+</body>
+</html>

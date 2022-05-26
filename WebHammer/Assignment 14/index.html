@@ -1,0 +1,29 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+     let counter = 0;
+     function slideShow(){
+       counter++;
+       if(counter === 1)
+       window.document.slideshow.src= "ishigami.jpg"
+       else if(counter === 2)
+       window.document.slideshow.src= "landscape0.jpg"
+       else if(counter === 3)
+       window.document.slideshow.src= "landscape1.jpg"
+       else if(counter === 4)
+       window.document.slideshow.src= "landscape2.jpg"
+       else{
+           counter = 0;
+           window.document.slideshow.src = "ishigami_noface.jpg"
+       }
+    }   
+    </script>
+</head>
+<body>
+    <img name = "slideshow" src="ishigami_noface.jpg" onclick="slideShow()">
+</body>
+</html>
